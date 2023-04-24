@@ -1,0 +1,24 @@
+<body background="https://mcdn.wallpapersafari.com/medium/77/46/gshkve.jpg">
+<nav class="navbar navbar-expand-sm bg-primary  navbar navbar-dark bg-dark">
+  <ul class = "navbar-nav">
+    <li class = "nav-item">
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/banks" class="nav-link">Bank List</a>
+      <!--  <a routerLink="employees" routerLinkActive="active" class="nav-link" >Employee List</a>-->
+    </li>
+    <li class = "nav-item">
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/create-bank" class="nav-link">Add New Bank</a>
+      <!--  <a routerLink="create-employee" routerLinkActive="active" class="nav-link" >Add Employee</a>-->
+    </li>
+    <li>
+        <a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a>
+    </li>
+    <li>
+        <a class="i" *ngIf="loginService.isUserLoggedIn()" (click)="conformLogout()" class="nav-link">LogOut</a>
+    </li>    
+</ul>
+</nav>
+<h1 class="text-center"> {{title}} </h1>
+<div class = "container">
+  <router-outlet></router-outlet>
+</div>
+</body>

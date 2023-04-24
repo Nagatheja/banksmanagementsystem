@@ -1,0 +1,23 @@
+h3{
+    background-color: white;
+}
+ body{
+    
+    background-color: aqua;width: 200px; 
+
+} 
+span{
+    background-color: rgb(194, 238, 207);
+}
+div{
+    border-width: 5px;
+    border-style: solid;
+    border-radius:5px;
+    padding: 2px;
+    margin-bottom: 1px;
+}
+span{
+    border-style: solid;
+    border-width: 5px;
+    cursor: pointer;
+}
